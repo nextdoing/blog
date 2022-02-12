@@ -11,7 +11,7 @@ features:
     details: 使用 gin/vue/react 等技术开发 合理的框架选择，良好的工程实践助你持续产出高质量代码 基于Casbin的 RBAC 访问控制模型
   - title: 代码生成
     details: 在线配置表信息生成对应的代码，增删改查/排序/导出/权限控制等直接使用
-footer: MIT Licensed | Copyright © 2020-present wenjianzhang
+footer: MIT Licensed | Copyright © 2020-present NextDoing
 ---
 
 ## 5 分钟上手 go-admin
@@ -73,9 +73,3 @@ cgo: exec gcc: exec: "gcc": executable file not found in %PATH%
 [解决 cgo 问题进入](/guide/other/faq.html#_5-cgo-exec-missing-cc-exec-missing-cc-file-does-not-exist)
 
 :::
-
-## 反馈
-
-| Github Issue                                                        | 微信群                                                                           | QQ 群                                                                             |
-| ------------------------------------------------------------------- | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| [go-admin/issues](https://github.com/go-admin-team/go-admin/issues) | <img src="https://gitee.com/mydearzwj/image/raw/master/img/wx.png" width="60" /> | <img src="https://gitee.com/mydearzwj/image/raw/master/img/qq2.png" width="60" /> |
