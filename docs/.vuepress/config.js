@@ -10,7 +10,7 @@ module.exports = {
   },
   title: 'go-admin',
   description: 'A magical vue admin',
-  base: '/admin/',
+  base: './',
   head: [
     [
       'link',
@@ -19,19 +19,7 @@ module.exports = {
         href: '/favicon.ico'
       }
     ],
-    [
-      'script',
-      {},
-      `
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?f98a2f382011d17906899de9f676b294";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-        `
-    ]
+    ['script', {}, ` `]
   ],
   themeConfig: {
     repo: 'go-admin-team/go-admin',
