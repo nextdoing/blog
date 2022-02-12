@@ -16,6 +16,6 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git push -f "https://${access_token}@github.com/go-admin-team/go-admin-doc.git" main:gh-pages
+git push -f "https://${access_token}@github.com/nextdoing/blog.git" main:gh-pages
 
 cd -

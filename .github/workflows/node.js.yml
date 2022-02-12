@@ -21,30 +21,11 @@ jobs:
       run: npm install
     - name: Run build task
       run: npm run build --prod
-    - name: Get Path
-      run: pwd
-    - name: Zip
-      run: zip -q -r dist.zip ./docs/.vuepress/dist
-    - name: Ls
-      run: ls
-    - name: 'Copy'
-      uses: appleboy/scp-action@master
-      env:
-        HOST: ${{ secrets.REMOTE_HOST }}
-        USERNAME: ${{ secrets.REMOTE_USER }}
-        KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        PORT: ${{ secrets.REMOTE_PORT }}
-        SOURCE: ./docs/.vuepress/dist
-        TARGET: /data/www/dist/doc
-    - name: mv
-      uses: appleboy/ssh-action@master
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
-          host: ${{ secrets.REMOTE_HOST }}
-          username: ${{ secrets.REMOTE_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: ${{ secrets.REMOTE_PORT }}
-          script: |
-            rm -rf /www/doc/*
-            cp -r -f /data/www/dist/doc/docs/.vuepress/dist/* /www/doc
-            rm -rf /data/www/dist/doc/*
-          
+          ACCESS_TOKEN: ${{ secrets.SSH_PRIVATE_KEY }}
+          REPOSITORY_NAME: nextdoing/blog
+          BRANCH: gh-pages
+          FOLDER: docs/.vuepress/dist
+      
