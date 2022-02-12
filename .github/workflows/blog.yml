@@ -22,7 +22,7 @@ jobs:
     - name: Run build task
       run: npm run build --prod
     - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
+      uses: JamesIves/github-pages-deploy-action@3.5.9
       with:
           ACCESS_TOKEN: ${{ secrets.SSH_PRIVATE_KEY }}
           REPOSITORY_NAME: nextdoing/blog
